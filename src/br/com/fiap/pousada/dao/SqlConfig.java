@@ -23,7 +23,7 @@ public class SqlConfig {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			// Especificar usuário e senha do banco nos últimos parâmetros
-			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl", "", "");
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl", "RM86288", "210196");
 			return conn;
 
 		} catch (ClassNotFoundException e) {

@@ -11,6 +11,9 @@ public class Quarto {
 		this.valorDiaria = valorDiaria;
 	}
 	
+	public Quarto() {
+	}
+	
 	public Integer getNumero() {
 		return numero;
 	}
@@ -25,7 +28,7 @@ public class Quarto {
 	
 	@Override
 	public String toString() {
-		return String.format("Quarto Nro: %s -> { Categoria: %s, Max. Pessoas: %s, Valor Diária: R$ %.2f }", 
+		return String.format("Quarto Nro: %s -> { Max. Pessoas: %s, Valor Diária: R$ %.2f }", 
 				numero, maxPessoas, valorDiaria);
 	}
 }

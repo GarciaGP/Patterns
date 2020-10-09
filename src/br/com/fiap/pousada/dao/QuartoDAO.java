@@ -39,15 +39,19 @@ public class QuartoDAO implements DAO<Quarto> {
 
 			if (rs.next()) {
 				quarto = new Quarto(rs.getInt("NR_QUARTO"), rs.getInt("MAXPESSOAS"), rs.getDouble("VLRDIARIA"));
+			}else {
+				throw new Exception("Quarto não encontrado."); 
 			}
 
 			this.conn.close();
 			return quarto;
-		} catch (SQLException e) {
-			System.err.println("Quarto não encontrado.");
+		} catch (SQLException e) {			
+			System.err.println(e.getMessage());			
+		} catch (Exception e) {
 			System.err.println(e.getMessage());
-			return null;
 		}
+		
+		return new Quarto();
 	}
 
 	@Override

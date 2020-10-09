@@ -7,8 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 		QuartoDAO dao = new QuartoDAO();
 		
-		Quarto quarto = dao.findById(1);
-		
+		Quarto quarto = dao.findById(1);		
 		System.out.print(quarto.toString());
 		
 	}
